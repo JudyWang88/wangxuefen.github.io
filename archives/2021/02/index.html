@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-cn">
   <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
   <meta charset="utf-8">
   <!-- SEO相关 -->
@@ -24,7 +24,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2021/2 - 王雪芬</title>
+  <title>归档：2021/2 - 王雪芬</title>
   
 
   
@@ -452,16 +452,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title" >
-      <a href="/2021/02/04/hello-world/">
-        Hello World
+      <a href="/2021/02/05/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF/">
+        如何实现延迟发送消息
       </a>
     </h2>
   
   <div class='md'>
     
       
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
+        
+
+
+
+最近在业务需求中接触到客服系统，业务描述：在满足某些条件下，如果在多少秒之后没有发送消息，则按照配置规则发送配置信息。
+1 业务描述
+1 根据访客超时未回复发送配置信息
+2 自动结束会话，当系统没有消息产生。
+
+2 使用 Springcloud RabbitMQ
+1 引入 PoM 文件
+
+12345&lt;dependency&gt;    &lt;groupId&gt;org.sp...
       
     
   </div>
@@ -469,13 +480,13 @@ Qu...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2021-02-04</time>
+        <time>2021-02-05</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/02/04/hello-world/'>
-            Read More
+          <a class='readmore' href='/2021/02/05/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF/'>
+            阅读全文
           </a>
         </div>
       
@@ -570,61 +581,12 @@ Qu...
   
     
     
-  
-
-  <section class="widget category shadow desktop">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Foo/" href="/categories/Foo/"
-            id="categoriesFoo"
-            ><div class='name'>Foo</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Foo/Bar/" href="/categories/Foo/Bar/"
-            id="categoriesFooBar"
-            ><div class='name'>Bar</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Foo/Bar/Baz/" href="/categories/Foo/Bar/Baz/"
-            id="categoriesFooBarBaz"
-            ><div class='name'>Baz</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
 
   
 
   
     
     
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Bar/" style="font-size: 24px; color: #555">Bar</a> <a href="/tags/Baz/" style="font-size: 14px; color: #999">Baz</a> <a href="/tags/Foo/" style="font-size: 24px; color: #555">Foo</a>
-    </div>
-  </section>
-
 
   
 
@@ -687,7 +649,7 @@ Qu...
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
       
     
@@ -699,9 +661,9 @@ Qu...
       
     
       
-        Use
+        本站使用
         <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1" target="_blank" class="codename">Volantis</a>
-        as theme
+        作为主题
       
     
       
