@@ -5,10 +5,6 @@
   <!-- SEO相关 -->
   
     
-      
-        <meta name="robots" content="index,follow">
-      
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -26,11 +22,11 @@
 
   <!-- 页面元数据 -->
   
-  <title>王雪芬</title>
+  <title>如何实现延迟发送消息 - 王雪芬</title>
+  
+    <meta name="keywords" content="MQ">
   
 
-  
-    <meta name="description" content="让我们一起思考进步吧！">
   
 
   <!-- feed -->
@@ -108,7 +104,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -199,7 +195,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  dock' style="display: ;">
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://7.dusays.com/2021/02/04/7e9148ddd497c.jpg"></div>
           
@@ -264,7 +260,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 </div>
 
-          <div id="scroll-down" style="display: ;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
         </div>
     
   
@@ -275,77 +271,241 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
-  <section class="post-list">
-    
-      
-        
-          
-        
-        
-          
-        
-      
+
+
+  
+  <div class="article-meta" id="top">
     
     
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
     
-    <h2 class="article-title" >
-      <a href="/2021/02/06/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF/">
+      <h1 class="title">
         如何实现延迟发送消息
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
+      </h1>
+      <div class='new-meta-box'>
         
-最近在业务需求中接触到客服系统，业务描述：在满足某些条件下，如果在多少秒之后没有发送消息，则按照配置规则发送配置信息。
-1 业务描述
-1 根据访客超时未回复发送配置信息
-2 自动结束会话，当系统没有消息产生。
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>王雪芬</p>
+  </a>
+</div>
 
-2 使用 Springcloud RabbitMQ
-1 引入 PoM 文件
+          
+        
+          
+            
 
-12345&lt;dependency&gt;    &lt;groupId&gt;org.sprin...
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年2月6日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
-    
+      <div id="lc-pv" data-title="如何实现延迟发送消息" data-path="/2021/02/06/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-02-06</time>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <p><img src="https://imgkr2.cn-bj.ufileos.com/e83fc666-a03a-4bda-b608-7bc73e4396c9.jpg?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=QyrylB%252FRLfYRmCFzhhhcByLAQ%252FU%253D&Expires=1612679917" class="lazyload" data-srcset="https://imgkr2.cn-bj.ufileos.com/e83fc666-a03a-4bda-b608-7bc73e4396c9.jpg?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=QyrylB%252FRLfYRmCFzhhhcByLAQ%252FU%253D&Expires=1612679917" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p>最近在业务需求中接触到客服系统，业务描述：在满足某些条件下，如果在多少秒之后没有发送消息，则按照配置规则发送配置信息。</p>
+<h2 id="1-业务描述"><a href="#1-业务描述" class="headerlink" title="1 业务描述"></a>1 业务描述</h2><ul>
+<li>1 根据访客超时未回复发送配置信息</li>
+<li>2 自动结束会话，当系统没有消息产生。</li>
+</ul>
+<h2 id="2-使用-Springcloud-RabbitMQ"><a href="#2-使用-Springcloud-RabbitMQ" class="headerlink" title="2 使用 Springcloud RabbitMQ"></a>2 使用 Springcloud RabbitMQ</h2><ul>
+<li>1 引入 PoM 文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.cloud&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-cloud-start-stream-rabbitmq&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>2 定义 Input 和 Output 接口</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public interface AfterSendMessageXX &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 在线客服发送消息后处理输入通道</span><br><span class="line">     * @return</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Input(MessageChannelConstant.XX)</span><br><span class="line">    SubscribableChannel sendImMessageSink();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public interface AfterSendMessageXX &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 在线客服发送消息后处理通道，输出通道</span><br><span class="line">     * @return</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Output(MessageChannelConstant.XX)</span><br><span class="line">    SubscribableChannel sendImMessageMsg();</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>3 定义接收实体</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Slf4j</span><br><span class="line">@EnableBinding(AfterSendMessageSink.class)</span><br><span class="line">public class DelayMQMessageHandler &#123;</span><br><span class="line">  @StreamListener(MessageChannelConstant.XX)</span><br><span class="line">    public void afterMessageSandHandler(MessageBody&lt;AfterSendMessageReq&gt; messBody) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>4 定义发送消息 Controller</li>
+</ul>
+<p>这里面的 type 类型表示发送的什么类型的消息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Message&lt;AfterSendMessageReq&gt; afterSendMessageReqMessage &#x3D; MessageUtils.buildMessage(AfterSendMessageReq.builder()</span><br><span class="line">                  .type(2)</span><br><span class="line">                  .build());</span><br><span class="line">          delayMessageService.buildAndSendMessage(AfterSendMessageSource.class, &quot;sendImMessageMsg&quot;, delayMillis, afterSendMessageReqMessage);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="3-RabbitMq-消息如何进行分组"><a href="#3-RabbitMq-消息如何进行分组" class="headerlink" title="3 RabbitMq 消息如何进行分组"></a>3 RabbitMq 消息如何进行分组</h2><p>通常在生产环境中，我们不会以单节点的方式运行在生产环境中，同一个服务器启动多个实例的时候，这个实例会绑定到同一个消息的通道的 topic 上，假如如果有多个消息接收者，那么消息生产者发送的消息会被多个消费者都接收到，这种情况在某些实际场景下是有很大问题的，这就会出现重复消费的问题，这个时候我们就可以采用 stream 中消息分组解决</p>
+<p>在 stream 中只有同一个组的多个消费者是竞争关系，他们之间消息只会被其中一个应用所消费，不同组之间是可以消费的。所以这样就避免了消费被重复消费的问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">cloud:</span><br><span class="line">  stream:</span><br><span class="line">    bindings:</span><br><span class="line">      afterSendIMMsgOutputChannel:</span><br><span class="line">        content-type: application&#x2F;json</span><br><span class="line">        destination: xx</span><br><span class="line">      afterSendIMMsgInputChannel:</span><br><span class="line">        content-type: application&#x2F;json</span><br><span class="line">        destination: xx</span><br><span class="line">        group: xx</span><br></pre></td></tr></table></figure>
+<h2 id="4-如何做到延迟发送消息"><a href="#4-如何做到延迟发送消息" class="headerlink" title="4 如何做到延迟发送消息"></a>4 如何做到延迟发送消息</h2><ul>
+<li>1 从配置中获取发送消息延长时间</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UnitRobotDictionary robotDictionary &#x3D; customerConfigService.getRobotType(companyId, robotId, ConfigTypeEnum.OUT_TIME_ROBOT_CONFIG);</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>2 封装要发送消息的实体信息</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">type &#x3D; 6;</span><br><span class="line">&#x2F;&#x2F;发送延时消息</span><br><span class="line">Message&lt;AfterSendMessageReq&gt; afterSendMessageReqMessage &#x3D; MessageUtils.buildMessage(AfterSendMessageReq.builder()</span><br><span class="line">                    .type(type)</span><br><span class="line">                    .conversationId(conversationId)</span><br><span class="line">                    .from(from)</span><br><span class="line">                    .to(to)</span><br><span class="line">                    .timeout(timeout * 1000)                                     .build());</span><br></pre></td></tr></table></figure>
+<ul>
+<li>3 在规定的时间内延迟发送消息</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">delayMessageService.buildAndSendMessage(AfterSendMessageSource.class, &quot;sendImMessageMsg&quot;, timeout * 1000, afterSendMessageReqMessage);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>4 消费者接收消息</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">@Slf4j</span><br><span class="line">@EnableBinding(AfterSendMessageSink.class)</span><br><span class="line">public class DelayMQMessageHandler &#123;</span><br><span class="line">    @StreamListener(MessageChannelConstant.AFTER_SEND_MESSAGE_INPUT_CHANNEL)</span><br><span class="line">     public void afterMessageSandHandler(MessageBody&lt;AfterSendMessageReq&gt; messBody) &#123;</span><br><span class="line">        log.info(&quot;receive msg body: &#123;&#125;&quot;, messBody);</span><br><span class="line">        if (Objects.isNull(messBody) || Objects.isNull(messBody.getPayload())) &#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        AfterSendMessageReq payload &#x3D; messBody.getPayload();</span><br><span class="line">        Integer payloadType &#x3D; payload.getType();</span><br><span class="line">      &#x2F;&#x2F;根据type类型走不同的业务逻辑</span><br><span class="line">        if (payloadType &#x3D;&#x3D; 6) &#123;</span><br><span class="line">            &#x2F;&#x2F;访客超时未回复逻辑机器人</span><br><span class="line">            handleVisitorTimeoutEvent(payload);</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>根据不同业务需求，来选择使用不同技术，多总结多收获~ (#^.^#)</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2021/02/06/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF/'>
-            Read More
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://yoursite.com/2021/02/06/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF/>http://yoursite.com/2021/02/06/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF/</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-02-05T22:39:09-08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年2月5日</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MQ/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MQ</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2021/02/06/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF/&title=如何实现延迟发送消息 - 王雪芬&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2021/02/06/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF/&title=如何实现延迟发送消息 - 王雪芬&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2021/02/06/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF/&title=如何实现延迟发送消息 - 王雪芬&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
   
+  
+
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
 
 
 </div>
@@ -355,98 +515,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">王雪芬</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <a href="/tags/MQ/" style="font-size: 14px; color: #999">MQ</a>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%9A%E5%8A%A1%E6%8F%8F%E8%BF%B0"><span class="toc-text">1 业务描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8-Springcloud-RabbitMQ"><span class="toc-text">2 使用 Springcloud RabbitMQ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-RabbitMq-%E6%B6%88%E6%81%AF%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%88%86%E7%BB%84"><span class="toc-text">3 RabbitMq 消息如何进行分组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%A6%82%E4%BD%95%E5%81%9A%E5%88%B0%E5%BB%B6%E8%BF%9F%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF"><span class="toc-text">4 如何做到延迟发送消息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
     </div>
   </section>
 
-
-  
 
   
 
@@ -461,21 +545,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="如何实现延迟发送消息";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="full";
-    cover_wrapper.style.display="";
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
     
   
 </script>
